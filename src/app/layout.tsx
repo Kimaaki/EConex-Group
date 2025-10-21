@@ -20,7 +20,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "EConex Group - Serviços Completos Angola",
-  description: "Serviços de limpeza, manutenção, climatização, automóvel e piscinas em Angola. Soluções profissionais com atendimento 24/7.",
+  description:
+    "Serviços de limpeza, manutenção, climatização, automóvel e piscinas em Angola. Soluções profissionais com atendimento 24/7.",
 };
 
 export default function RootLayout({
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <Script src="/lasy-bridge.js" strategy="beforeInteractive" />
+        <link rel="icon" href="/icon.png" type="image/png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
