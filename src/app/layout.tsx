@@ -33,7 +33,10 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <Script src="/lasy-bridge.js" strategy="beforeInteractive" />
-        <link rel="icon" href="/icon.png" type="image/png" />
+        {/* Novo favicon atualizado */}
+        <link rel="icon" href="/icon-v2.png" type="image/png" />
+        <link rel="shortcut icon" href="/icon-v2.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/icon-v2.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
