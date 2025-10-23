@@ -200,7 +200,7 @@ export default function EConexGroupApp() {
       description: 'Serviços especializados para veículos',
       subtitle: 'Cuidamos do seu veículo com produtos de qualidade e técnicas profissionais.',
       icon: Car,
-      image: 'https://img.freepik.com/premium-photo/women-fix-car-fuel-tank-together_482257-75565.jpg'
+      image: 'https://img.freepik.com/free-photo/expert-repairs-car-helped-by-lamp-light_482257-102860.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80'
     },
     {
       id: 'piscinas',
