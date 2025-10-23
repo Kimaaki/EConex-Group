@@ -163,7 +163,7 @@ export default function EConexGroupApp() {
       alt: 'Ilustração vetorial de técnico africano lavando carro'
     },
     piscinas: {
-      url: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=1200&h=700&fit=crop',
+      url: 'https://img.freepik.com/free-photo/swimming-pool-top-view_1150-11010.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80',
       alt: 'Ilustração vetorial de manutenção de piscina residencial'
     }
   }
