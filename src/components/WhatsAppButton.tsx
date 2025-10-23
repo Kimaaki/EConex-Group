@@ -1,27 +1,26 @@
+// WhatsAppButton.tsx
 "use client";
+import React from "react";
 
-const NUM = "351920000000"; // Número português sem + e sem espaços
-const MSG = "Olá, quero solicitar um serviço de limpeza da Limpszone.";
-const URL = `https://wa.me/${NUM}?text=${encodeURIComponent(MSG)}`;
-
-type Props = { className?: string; children?: React.ReactNode };
-
-export default function WhatsAppButton({ className = "", children = "WhatsApp" }: Props) {
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation(); // impede overlays/handlers de bloquearem o clique
-    window.open(URL, "_blank", "noopener,noreferrer");
-  };
-
+export default function WhatsAppButton() {
   return (
-    <button
-      type="button"
-      onClick={handleClick}
+    <a
+      href="https://wa.me/244938855529?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20pelo%20site%20da%20EConex%20Group."
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
-      className={className || "bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition"}
-      // garante que nada por cima bloqueie o clique
-      style={{ pointerEvents: "auto", cursor: "pointer", position: "relative", zIndex: 100 }}
+      className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 transition-transform transform hover:scale-110 z-50"
     >
-      {children}
-    </button>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+        width="28"
+        height="28"
+      >
+        <path d="M13.601 2.326A7.938 7.938 0 0 0 8.002.003a7.94 7.94 0 0 0-7.999 7.94 7.9 7.9 0 0 0 1.15 4.116L.057 15.845l3.936-1.02a7.94 7.94 0 0 0 4.01 1.07h.004c4.41 0 8.002-3.588 8.002-8.001a7.945 7.945 0 0 0-2.408-5.568zM8.003 14.5a6.47 6.47 0 0 1-3.293-.895l-.236-.14-2.334.605.623-2.277-.152-.233A6.465 6.465 0 0 1 1.54 7.94 6.463 6.463 0 0 1 8 1.474a6.47 6.47 0 0 1 6.459 6.465A6.47 6.47 0 0 1 8.003 14.5z" />
+        <path d="M11.602 9.769c-.197-.099-1.17-.578-1.352-.644-.181-.066-.314-.099-.446.1-.132.198-.512.644-.627.777-.115.132-.231.149-.428.05-.197-.099-.833-.307-1.588-.978-.588-.523-.985-1.169-1.101-1.366-.115-.198-.012-.305.087-.403.09-.09.198-.231.297-.347.099-.115.132-.198.198-.33.066-.132.033-.248-.016-.347-.05-.099-.446-1.074-.612-1.469-.161-.387-.324-.334-.446-.34l-.382-.007a.74.74 0 0 0-.537.248c-.182.198-.699.683-.699 1.665 0 .982.715 1.93.814 2.062.099.132 1.409 2.154 3.416 3.023.478.206.85.329 1.14.42.479.153.914.132 1.257.08.383-.058 1.17-.478 1.334-.94.165-.462.165-.856.115-.94-.049-.083-.181-.132-.378-.231z" />
+      </svg>
+    </a>
   );
 }
