@@ -856,7 +856,12 @@ export default function EConexGroupApp() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="bg-gradient-to-r from-blue-600 to-green-600 p-2 rounded-lg">
-                <Sparkles className="h-8 w-8 text-white" />
+               <img 
+  src="/logo-novo.png" 
+  alt="EConex Group" 
+  className="h-10 w-auto" 
+/>
+
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-800">EConex Group</h1>
