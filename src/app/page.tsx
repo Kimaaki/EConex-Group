@@ -1125,7 +1125,7 @@ export default function EConexGroupApp() {
               </h2>
             </div>
 
-            <Card className="fade-in-card border-l-4 border-blue-500 bg-blue-50 opacity-0">
+            <Card className="fade-in-card border-l-4 border-blue-500 bg-blue-50">
               <CardContent className="p-8">
                 <div className="text-lg text-gray-700 leading-relaxed space-y-4">
                   <p>
@@ -1152,7 +1152,7 @@ Com a EConex Group, você garante um espaço mais saudável, confortável e prod
               </h2>
             </div>
 
-            <Card className="fade-in-card border-l-4 border-red-500 bg-red-50 opacity-0">
+            <Card className="fade-in-card border-l-4 border-red-500 bg-red-50">
               <CardContent className="p-8">
                 <div className="text-lg text-gray-700 leading-relaxed space-y-4">
                   <p>
@@ -1179,7 +1179,7 @@ Com a EConex Group, você evita gastos inesperados, garante a durabilidade dos s
               </h2>
             </div>
 
-            <Card className="fade-in-card border-l-4 border-green-500 bg-green-50 opacity-0">
+            <Card className="fade-in-card border-l-4 border-green-500 bg-green-50">
               <CardContent className="p-8">
                 <div className="text-lg text-gray-700 leading-relaxed space-y-4">
                   <p>
