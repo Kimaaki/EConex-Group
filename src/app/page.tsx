@@ -1151,7 +1151,10 @@ Com a EConex Group, você garante um espaço mais saudável, confortável e prod
               <CardContent className="p-8">
                 <div className="text-lg text-gray-700 leading-relaxed space-y-4">
                   <p>
-                    Falhas elétricas e avarias dispendiosas podem ser evitadas com manutenção regular.
+                    Ignorar a manutenção periódica de equipamentos e infraestruturas pode causar prejuízos sérios e comprometer a segurança do seu espaço.
+Sistemas elétricos, climatização, canalizações e estruturas sem revisão acumulam desgaste e acabam falhando nos piores momentos.
+
+Com a EConex Group, você evita gastos inesperados, garante a durabilidade dos seus equipamentos e mantém tudo a funcionar em perfeitas condições, com acompanhamento técnico especializado e rápido em toda Angola..
                   </p>
                 </div>
               </CardContent>
