@@ -151,7 +151,7 @@ export default function EConexGroupApp() {
       alt: 'Profissional africana limpando sofá em casa moderna'
     },
     manutencao: {
-      url: 'https://img.freepik.com/free-photo/licensed-serviceman-starting-routine-condenser-maintenance-using-manifold-meters-read-pressure-external-air-conditioner-while-seasoned-wireman-writes-hvac-system-checkup-report-clipboard_482257-68066.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80',
+      url: 'https://img.freepik.com/free-photo/male-engineer-analyzed-industry-40-system-smart-manufacturing-plant_482257-126802.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80',
       alt: 'Técnico africano realizando manutenção profissional com uniforme azul e ferramentas'
     },
     climatizacao: {
