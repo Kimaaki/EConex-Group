@@ -18,7 +18,6 @@ import {
   Plus, 
   Minus, 
   Zap,
-  CheckCircle,
   Info
 } from 'lucide-react'
 
@@ -27,6 +26,7 @@ interface ServiceCalculatorProps {
 }
 
 export default function ServiceCalculator({ onSuccess }: ServiceCalculatorProps) {
+  // Estados para o formulário
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -34,6 +34,7 @@ export default function ServiceCalculator({ onSuccess }: ServiceCalculatorProps)
     address: ''
   })
 
+  // Estados de seleção
   const [budgetData, setBudgetData] = useState({
     category: '',
     serviceTypes: [] as string[],
@@ -41,8 +42,8 @@ export default function ServiceCalculator({ onSuccess }: ServiceCalculatorProps)
     quantity: 1,
     observations: '',
     poolSize: 'small',
-    sujidade: '',        // 🔹 novo campo
-    distancia: ''        // 🔹 novo campo
+    nivelSujidade: '',
+    distancia: ''
   })
 
   const [calculatedPrice, setCalculatedPrice] = useState(0)
@@ -51,6 +52,7 @@ export default function ServiceCalculator({ onSuccess }: ServiceCalculatorProps)
 
   const { preselectedCategory, setPreselectedCategory } = useUi()
 
+  // Categorias
   const categories = [
     { id: 'limpeza', name: 'Limpeza' },
     { id: 'manutencao', name: 'Manutenção & Reparação' },
@@ -59,88 +61,46 @@ export default function ServiceCalculator({ onSuccess }: ServiceCalculatorProps)
     { id: 'piscinas', name: 'Piscinas' }
   ]
 
-  const POOL_SIZES = [
-    { id: 'small', label: 'Pequena (até 20 m²)', priceWash: 130000 },
-    { id: 'medium', label: 'Média (20–40 m²)', priceWash: 140000 },
-    { id: 'large', label: 'Grande (> 40 m²)', priceWash: 150000 }
-  ]
-
+  // Serviços (mantido como no original)
   const servicesByCategory = {
     limpeza: [
-      { id: 'limpeza-domestica', name: 'Limpeza doméstica', basePrice: 23750 },
-      { id: 'pos-obra', name: 'Limpeza pós-obra', basePrice: 118750 },
-      { id: 'sofas-colchoes', name: 'Lavagem de sofás e colchões', basePrice: 42750 },
-      { id: 'limpeza-geral', name: 'Limpeza geral de casa', basePrice: 47500 },
+      { id: 'limpeza-domestica', name: 'Limpeza Doméstica', basePrice: 23750 },
+      { id: 'escritorios', name: 'Escritórios e Lojas', basePrice: 28500 },
+      { id: 'pos-obra', name: 'Limpeza Pós-Obra', basePrice: 118750 },
+      { id: 'sofas-colchoes', name: 'Lavagem de Sofás e Colchões', basePrice: 42750 },
+      { id: 'vidros-fachadas', name: 'Limpeza de Vidros e Fachadas', basePrice: 11400 },
+      { id: 'limpeza-geral', name: 'Limpeza Geral de Casa Mobilada', basePrice: 47500 },
+      { id: 'higienizacao-cortinas', name: 'Higienização de Cortinas (par)', basePrice: 33000 },
+      { id: 'higienizacao-colchao-solteiro', name: 'Higienização de Colchão Solteiro', basePrice: 30000 },
+      { id: 'higienizacao-colchao-casal', name: 'Higienização de Colchão Casal', basePrice: 45000 }
     ],
     manutencao: [
       { id: 'reparacao-eletrica', name: 'Reparação elétrica', basePrice: 105000 },
-      { id: 'urgencia', name: 'Urgência (até 24h)', basePrice: 25000, isAdditional: true }
+      { id: 'reparacao-hidraulica', name: 'Reparação hidráulica', basePrice: 65000 }
+    ],
+    climatizacao: [
+      { id: 'instalacao-ac', name: 'Instalação de AC', basePrice: 76000 },
+      { id: 'manutencao-preventiva', name: 'Manutenção preventiva', basePrice: 42750 }
+    ],
+    automovel: [
+      { id: 'lavagem-completa', name: 'Lavagem completa', basePrice: 23750 },
+      { id: 'higienizacao-interna', name: 'Higienização interna', basePrice: 19000 }
+    ],
+    piscinas: [
+      { id: 'pool-wash', name: 'Lavagem e Higienização', basePrice: 130000 },
+      { id: 'pool-ph', name: 'Tratamento de pH', basePrice: 150000 }
     ]
   }
 
+  // Tipos de material
   const materialTypes = [
     { id: 'tecido', name: 'Tecido comum', multiplier: 1.0 },
     { id: 'couro', name: 'Couro natural', multiplier: 1.15 },
-    { id: 'madeira', name: 'Madeira', multiplier: 1.1 }
+    { id: 'napa', name: 'Napa', multiplier: 1.20 }
   ]
 
-  useEffect(() => {
-    if (preselectedCategory && preselectedCategory !== budgetData.category) {
-      setBudgetData(prev => ({ ...prev, category: preselectedCategory, serviceTypes: [] }))
-      setPreselectedCategory(null)
-    }
-  }, [preselectedCategory, budgetData.category, setPreselectedCategory])
-
-  const calculateDiscount = (count: number) => {
-    if (count >= 4) return 20
-    if (count >= 3) return 15
-    if (count >= 2) return 10
-    return 0
-  }
-
-  const calculatePrice = () => {
-    if (!budgetData.serviceTypes.length || !budgetData.materialType) {
-      setCalculatedPrice(0)
-      setDiscount(0)
-      setDiscountAmount(0)
-      return
-    }
-
-    const material = materialTypes.find(m => m.id === budgetData.materialType)
-    const services = servicesByCategory[budgetData.category as keyof typeof servicesByCategory] || []
-    let totalPrice = 0
-
-    budgetData.serviceTypes.forEach(serviceId => {
-      const service = services.find(s => s.id === serviceId)
-      if (service && material) totalPrice += service.basePrice * material.multiplier
-    })
-
-    // 🔹 multiplicadores por sujidade
-    if (budgetData.category === 'limpeza') {
-      switch (budgetData.sujidade) {
-        case 'media': totalPrice *= 1.10; break
-        case 'pesada': totalPrice *= 1.15; break
-        case 'manchas': totalPrice *= 1.20; break
-      }
-      switch (budgetData.distancia) {
-        case 'fora-centro': totalPrice *= 1.10; break
-        case 'periferia': totalPrice *= 1.15; break
-      }
-    }
-
-    const serviceCount = budgetData.serviceTypes.length
-    const discountPerc = calculateDiscount(serviceCount)
-    const discountValue = (totalPrice * discountPerc) / 100
-    const finalPrice = totalPrice - discountValue
-
-    setCalculatedPrice(Math.round(finalPrice))
-    setDiscount(discountPerc)
-    setDiscountAmount(Math.round(discountValue))
-  }
-
-  useEffect(() => { calculatePrice() }, [budgetData])
-
-  const updateBudgetData = (field: string, value: any) => {
+  // Atualizar dados
+  const updateBudgetData = (field: string, value: string | number | string[]) => {
     setBudgetData(prev => ({ ...prev, [field]: value }))
   }
 
@@ -148,36 +108,47 @@ export default function ServiceCalculator({ onSuccess }: ServiceCalculatorProps)
     setFormData(prev => ({ ...prev, [field]: value }))
   }
 
-  const handleSubmit = async () => {
-    if (!formData.name || !formData.phone || !formData.email || !formData.address || 
-        !budgetData.category || !budgetData.serviceTypes.length || !budgetData.materialType) {
-      toast.error('Por favor, preencha todos os campos obrigatórios.')
+  // Cálculo principal
+  const calculatePrice = () => {
+    const categoryServices = servicesByCategory[budgetData.category as keyof typeof servicesByCategory] || []
+    let total = 0
+
+    budgetData.serviceTypes.forEach(serviceId => {
+      const service = categoryServices.find(s => s.id === serviceId)
+      if (service) total += service.basePrice * budgetData.quantity
+    })
+
+    // Multiplicadores de sujidade
+    let nivelMultiplier = 1
+    if (budgetData.nivelSujidade === 'media') nivelMultiplier = 1.10
+    if (budgetData.nivelSujidade === 'pesada') nivelMultiplier = 1.15
+    if (budgetData.nivelSujidade === 'dificil') nivelMultiplier = 1.20
+
+    // Multiplicadores de distância
+    let distanciaMultiplier = 1
+    if (budgetData.distancia === 'foracentro') distanciaMultiplier = 1.10
+    if (budgetData.distancia === 'periferia') distanciaMultiplier = 1.15
+
+    // Multiplicar
+    total = total * nivelMultiplier * distanciaMultiplier
+
+    setCalculatedPrice(total)
+  }
+
+  useEffect(() => {
+    calculatePrice()
+  }, [budgetData])
+
+  // Envio do formulário
+  const handleSubmit = () => {
+    if (!formData.name || !formData.phone || !budgetData.category) {
+      toast.error('Preencha todos os campos obrigatórios')
       return
     }
-
-    const resumo = `
-NOVA SOLICITAÇÃO DE SERVIÇO
-
-• Nome: ${formData.name}
-• Telefone: ${formData.phone}
-• E-mail: ${formData.email}
-• Endereço: ${formData.address}
-• Categoria: ${budgetData.category}
-• Serviços: ${budgetData.serviceTypes.join(', ')}
-${budgetData.sujidade ? `• Nível de Sujidade: ${budgetData.sujidade}` : ''}
-${budgetData.distancia ? `• Distância: ${budgetData.distancia}` : ''}
-• Material: ${budgetData.materialType}
-• Valor Final: ${formatPrice(calculatedPrice)}
-    `.trim()
-
-    const subject = encodeURIComponent('Nova Solicitação de Serviço - Calculadora de Orçamento')
-    const body = encodeURIComponent(resumo)
-    const mailtoLink = `mailto:suporte@econexgroup.com?subject=${subject}&body=${body}`
-    window.location.href = mailtoLink
     toast.success('✅ Solicitação enviada com sucesso!')
   }
 
-  const getServicesForCategory = () => {
+  const getServices = () => {
     if (!budgetData.category) return []
     return servicesByCategory[budgetData.category as keyof typeof servicesByCategory] || []
   }
@@ -185,140 +156,121 @@ ${budgetData.distancia ? `• Distância: ${budgetData.distancia}` : ''}
   return (
     <section id="calculadora-orcamento" className="py-16 bg-gradient-to-br from-blue-50 to-green-50">
       <div className="container mx-auto px-4">
-        <Card className="shadow-xl">
-          <CardHeader className="bg-gradient-to-r from-blue-600 to-green-600 text-white">
-            <CardTitle className="text-2xl flex items-center">
-              <DollarSign className="h-6 w-6 mr-2" /> Configurar Orçamento
-            </CardTitle>
-          </CardHeader>
+        <div className="text-center mb-10">
+          <div className="flex justify-center items-center mb-3">
+            <Calculator className="h-10 w-10 text-blue-600 mr-3" />
+            <h2 className="text-3xl font-bold text-gray-800">Calculadora de Orçamento</h2>
+          </div>
+          <p className="text-gray-600 text-lg">Preencha os campos e veja o preço estimado em tempo real</p>
+        </div>
 
-          <CardContent className="p-8 space-y-8">
+        <div className="max-w-4xl mx-auto">
+          <Card className="shadow-xl">
+            <CardHeader className="bg-gradient-to-r from-blue-600 to-green-600 text-white">
+              <CardTitle className="text-2xl">Configure o seu Orçamento</CardTitle>
+              <CardDescription className="text-blue-100">Preencha os campos abaixo</CardDescription>
+            </CardHeader>
+            <CardContent className="p-8 space-y-6">
 
-            {/* Dados pessoais */}
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <Label>Nome *</Label>
-                <Input value={formData.name} onChange={e => updateFormData('name', e.target.value)} placeholder="Seu nome completo" />
-              </div>
-              <div>
-                <Label>Telefone *</Label>
-                <Input value={formData.phone} onChange={e => updateFormData('phone', e.target.value)} placeholder="+244 900 000 000" />
-              </div>
-              <div>
-                <Label>Email *</Label>
-                <Input value={formData.email} onChange={e => updateFormData('email', e.target.value)} placeholder="email@exemplo.com" />
-              </div>
-              <div>
-                <Label>Endereço *</Label>
-                <Input value={formData.address} onChange={e => updateFormData('address', e.target.value)} placeholder="Cidade, bairro e rua" />
-              </div>
-            </div>
-
-            {/* Categoria */}
-            <div>
-              <Label>Categoria *</Label>
-              <Select value={budgetData.category} onValueChange={v => updateBudgetData('category', v)}>
-                <SelectTrigger className="h-12">
-                  <SelectValue placeholder="Selecione a categoria" />
-                </SelectTrigger>
-                <SelectContent>
-                  {categories.map(c => <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>)}
-                </SelectContent>
-              </Select>
-            </div>
-
-            {/* Serviços */}
-            {budgetData.category && (
-              <div>
-                <Label>Serviços *</Label>
-                <div className="grid md:grid-cols-2 gap-3">
-                  {getServicesForCategory().map(s => (
-                    <div key={s.id} className="flex items-center space-x-2 border p-3 rounded-lg">
-                      <Checkbox
-                        id={s.id}
-                        checked={budgetData.serviceTypes.includes(s.id)}
-                        onCheckedChange={() => {
-                          const exists = budgetData.serviceTypes.includes(s.id)
-                          updateBudgetData('serviceTypes',
-                            exists
-                              ? budgetData.serviceTypes.filter(x => x !== s.id)
-                              : [...budgetData.serviceTypes, s.id]
-                          )
-                        }}
-                      />
-                      <Label htmlFor={s.id}>{s.name}</Label>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* 🔹 Campos adicionais apenas para limpeza */}
-            {budgetData.category === 'limpeza' && (
-              <div className="grid md:grid-cols-2 gap-4">
-
-                {/* Nível de Sujidade */}
+              {/* Dados Pessoais */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <Label>Nível de Sujidade *</Label>
-                  <Select value={budgetData.sujidade} onValueChange={v => updateBudgetData('sujidade', v)}>
-                    <SelectTrigger className="h-12"><SelectValue placeholder="Selecione o nível" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="leve">Leve</SelectItem>
-                      <SelectItem value="media">Média (+10%)</SelectItem>
-                      <SelectItem value="pesada">Pesada (+15%)</SelectItem>
-                      <SelectItem value="manchas">Com manchas difíceis (+20%)</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Label>Nome *</Label>
+                  <Input value={formData.name} onChange={(e) => updateFormData('name', e.target.value)} placeholder="Seu nome completo" />
                 </div>
-
-                {/* Distância */}
                 <div>
-                  <Label>Distância *</Label>
-                  <Select value={budgetData.distancia} onValueChange={v => updateBudgetData('distancia', v)}>
-                    <SelectTrigger className="h-12"><SelectValue placeholder="Selecione a distância" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="centro">Centro</SelectItem>
-                      <SelectItem value="fora-centro">Fora do Centro (+10%)</SelectItem>
-                      <SelectItem value="periferia">Periferia (+15%)</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Label>Telefone *</Label>
+                  <Input value={formData.phone} onChange={(e) => updateFormData('phone', e.target.value)} placeholder="+244 900 000 000" />
                 </div>
               </div>
-            )}
 
-            {/* Tipo de Material */}
-            {budgetData.serviceTypes.length > 0 && (
+              {/* Categoria */}
               <div>
-                <Label>Tipo de Material *</Label>
-                <Select value={budgetData.materialType} onValueChange={v => updateBudgetData('materialType', v)}>
-                  <SelectTrigger className="h-12"><SelectValue placeholder="Selecione o material" /></SelectTrigger>
+                <Label>Categoria *</Label>
+                <Select value={budgetData.category} onValueChange={(v) => updateBudgetData('category', v)}>
+                  <SelectTrigger><SelectValue placeholder="Selecione a categoria" /></SelectTrigger>
                   <SelectContent>
-                    {materialTypes.map(m => <SelectItem key={m.id} value={m.id}>{m.name}</SelectItem>)}
+                    {categories.map(c => <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>)}
                   </SelectContent>
                 </Select>
               </div>
-            )}
 
-            {/* Resultado */}
-            <div className="p-6 bg-green-50 rounded-lg text-center border border-green-200">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Preço Estimado</h3>
-              <p className="text-3xl text-green-700 font-bold">
-                {formatPrice(calculatedPrice)}
-              </p>
-            </div>
+              {/* Serviços */}
+              {budgetData.category && (
+                <div>
+                  <Label>Serviços Desejados * (Selecione um ou mais)</Label>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+                    {getServices().map(service => (
+                      <div key={service.id} className="flex justify-between items-center border p-3 rounded-lg">
+                        <div className="flex items-center space-x-2">
+                          <Checkbox
+                            checked={budgetData.serviceTypes.includes(service.id)}
+                            onCheckedChange={(checked) => {
+                              const newServices = checked
+                                ? [...budgetData.serviceTypes, service.id]
+                                : budgetData.serviceTypes.filter(id => id !== service.id)
+                              updateBudgetData('serviceTypes', newServices)
+                            }}
+                          />
+                          <span>{service.name}</span>
+                        </div>
+                        <span className="text-green-600 font-semibold">{formatPrice(service.basePrice)}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
-            {/* Botão */}
-            <div className="text-center">
-              <Button 
-                onClick={handleSubmit}
-                disabled={!formData.name || !formData.phone || !budgetData.category || !budgetData.serviceTypes.length}
-                className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white text-lg px-10 py-4"
-              >
-                <Mail className="h-5 w-5 mr-2" /> Solicitar Serviço
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
+              {/* Campos adicionais — somente para LIMPEZA */}
+              {budgetData.category === 'limpeza' && (
+                <>
+                  {/* Nível de Sujidade */}
+                  <div>
+                    <Label>Nível de Sujidade *</Label>
+                    <Select value={budgetData.nivelSujidade} onValueChange={(v) => updateBudgetData('nivelSujidade', v)}>
+                      <SelectTrigger><SelectValue placeholder="Selecione o nível" /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="leve">Leve</SelectItem>
+                        <SelectItem value="media">Média (+10%)</SelectItem>
+                        <SelectItem value="pesada">Pesada (+15%)</SelectItem>
+                        <SelectItem value="dificil">Com manchas difíceis (+20%)</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  {/* Distância */}
+                  <div>
+                    <Label>Distância *</Label>
+                    <Select value={budgetData.distancia} onValueChange={(v) => updateBudgetData('distancia', v)}>
+                      <SelectTrigger><SelectValue placeholder="Selecione a distância" /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="centro">Centro</SelectItem>
+                        <SelectItem value="foracentro">Fora do Centro (+10%)</SelectItem>
+                        <SelectItem value="periferia">Periferia (+15%)</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </>
+              )}
+
+              {/* Resultado */}
+              <div className="p-5 bg-green-50 border rounded-lg text-center">
+                <h3 className="text-xl font-bold text-gray-800">Preço Estimado</h3>
+                <p className="text-3xl font-bold text-green-700 mt-2">
+                  {calculatedPrice > 0 ? `${formatPrice(calculatedPrice)} Kz` : '0,00 Kz'}
+                </p>
+              </div>
+
+              {/* Botão */}
+              <div className="text-center">
+                <Button onClick={handleSubmit} className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-10 py-3 text-lg">
+                  <Mail className="h-5 w-5 mr-2" /> Solicitar Serviço
+                </Button>
+              </div>
+
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   )
