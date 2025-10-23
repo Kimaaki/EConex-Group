@@ -159,7 +159,7 @@ export default function EConexGroupApp() {
       alt: 'Ilustração vetorial moderna de técnico africano instalando ar-condicionado em casa ou escritório em Angola'
     },
     automovel: {
-      url: 'https://img.freepik.com/free-photo/expert-repairs-car-helped-by-lamp-light_482257-102860.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80',
+      url: 'https://img.freepik.com/free-photo/mechanic-servicing-car-engine_1170-1684.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80',
       alt: 'Ilustração vetorial de técnico africano lavando carro'
     },
     piscinas: {
