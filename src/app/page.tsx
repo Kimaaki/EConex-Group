@@ -176,7 +176,7 @@ export default function EConexGroupApp() {
       description: 'Serviços completos de limpeza para todos os ambientes',
       subtitle: 'Soluções de limpeza adaptadas à realidade das cidades angolanas — rapidez, confiança e preço justo.',
       icon: Sparkles,
-      image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=300&fit=crop'
+      image: 'https://img.freepik.com/premium-photo/young-black-man-uniform-yellow-gloves-using-vacuum-cleaner_274679-35137.jpg'
     },
     {
       id: 'manutencao',
@@ -184,7 +184,7 @@ export default function EConexGroupApp() {
       description: 'Serviços técnicos de manutenção e reparação',
       subtitle: 'Técnicos especializados para resolver problemas elétricos, hidráulicos e de equipamentos.',
       icon: Wrench,
-      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop'
+      image: 'https://img.freepik.com/free-photo/licensed-serviceman-starting-routine-condenser-maintenance-using-manifold-meters-read-pressure-external-air-conditioner-while-seasoned-wireman-writes-hvac-system-checkup-report-clipboard_482257-68066.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80'
     },
     {
       id: 'climatizacao',
@@ -192,7 +192,7 @@ export default function EConexGroupApp() {
       description: 'Instalação e manutenção de sistemas de ar-condicionado',
       subtitle: 'Especialistas em climatização para o clima tropical angolano.',
       icon: Wind,
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop'
+      image: 'https://img.freepik.com/free-photo/expert-repairman-doing-condenser-investigations-filter-replacements-necessary-fixes-prevent-major-breakdowns-proficient-worker-checking-up-hvac-system-writing-findings-clipboard_482257-65742.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80'
     },
     {
       id: 'automovel',
@@ -200,7 +200,7 @@ export default function EConexGroupApp() {
       description: 'Serviços especializados para veículos',
       subtitle: 'Cuidamos do seu veículo com produtos de qualidade e técnicas profissionais.',
       icon: Car,
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop'
+      image: 'https://img.freepik.com/premium-photo/women-fix-car-fuel-tank-together_482257-75565.jpg'
     },
     {
       id: 'piscinas',
@@ -208,7 +208,7 @@ export default function EConexGroupApp() {
       description: 'Manutenção e tratamento de piscinas',
       subtitle: 'Mantenha sua piscina sempre limpa e segura para toda a família.',
       icon: Waves,
-      image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=300&fit=crop'
+      image: 'https://img.freepik.com/free-photo/sky-travel-resort-leisure-swimming_1203-4672.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80'
     }
   ]
 
@@ -296,7 +296,7 @@ export default function EConexGroupApp() {
       city: 'Luanda, Angola',
       service: 'Limpeza',
       comment: 'Excelente atendimento! O serviço de limpeza foi rápido, cuidadoso e profissional. Recomendo a todos.',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c9c0e8d3?w=150&h=150&fit=crop&crop=face'
+      image: 'https://img.freepik.com/free-photo/happy-successful-professional-holding-folder-with-documents_74855-2314.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80'
     },
     {
       name: 'Carlos Mateus',
@@ -317,7 +317,7 @@ export default function EConexGroupApp() {
       city: 'Lobito, Angola',
       service: 'Climatização',
       comment: 'Instalação do ar-condicionado perfeita. Equipe pontual e muito profissional.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+      image: 'https://img.freepik.com/free-psd/smiley-middle-age-man-posing_23-2151842267.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80'
     },
     {
       name: 'Sílvia Tavares',
@@ -331,7 +331,7 @@ export default function EConexGroupApp() {
       city: 'Cabinda, Angola',
       service: 'Automóvel',
       comment: 'Lavagem completa do carro ficou perfeita. Já usei o serviço duas vezes e sempre excelente.',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face'
+      image: 'https://img.freepik.com/free-photo/african-american-businessman-gray-suit-studio-portrait_53876-102940.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80'
     },
     {
       name: 'Neusa Ferreira',
