@@ -1124,7 +1124,10 @@ export default function EConexGroupApp() {
               <CardContent className="p-8">
                 <div className="text-lg text-gray-700 leading-relaxed space-y-4">
                   <p>
-                    A higienização evita ácaros, fungos e odores, garantindo conforto e saúde.
+                    Manter o ambiente limpo e higienizado não é apenas uma questão estética — é uma questão de saúde e bem-estar.
+A higienização regular elimina vírus, bactérias, fungos e ácaros que se acumulam no dia a dia, prevenindo doenças respiratórias e alergias.
+
+Com a EConex Group, você garante um espaço mais saudável, confortável e produtivo, com técnicos especializados e produtos certificados que respeitam o meio ambiente.
                   </p>
                 </div>
               </CardContent>
