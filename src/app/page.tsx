@@ -866,7 +866,7 @@ export default function EConexGroupApp() {
             <div className="hidden md:flex items-center space-x-6">
               <div className="flex items-center space-x-2 text-gray-600">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+244920000000" className="hover:text-blue-600">+244 920 000 000</a>
+                <a href="tel:+244938855529" className="hover:text-blue-600">+244 938 855 529</a>
               </div>
               <div className="flex items-center space-x-2 text-gray-600">
                 <Mail className="h-4 w-4" />
