@@ -1178,7 +1178,12 @@ Com a EConex Group, você evita gastos inesperados, garante a durabilidade dos s
               <CardContent className="p-8">
                 <div className="text-lg text-gray-700 leading-relaxed space-y-4">
                   <p>
-                    Oferecemos planos mensais e semanais com descontos progressivos e agendamento rápido.
+                    A EConex Group oferece soluções completas de limpeza e manutenção adaptadas às necessidades de cada cliente.
+Desenvolvemos planos flexíveis para residências, empresas, condomínios, escolas e espaços comerciais, garantindo resultados consistentes e alta qualidade em cada atendimento.
+
+Com opções de serviços pontuais ou contratos contínuos, asseguramos conforto, segurança e economia através de uma equipa técnica qualificada e um acompanhamento próximo.
+
+Peça agora o seu orçamento personalizado e descubra o plano ideal para o seu espaço.
                   </p>
                 </div>
               </CardContent>
