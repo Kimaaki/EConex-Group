@@ -155,7 +155,7 @@ export default function EConexGroupApp() {
       alt: 'Técnico africano realizando manutenção profissional com uniforme azul e ferramentas'
     },
     climatizacao: {
-      url: 'https://img.freepik.com/free-photo/expert-looks-online-new-air-filters_482257-80048.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80',
+      url: 'https://img.freepik.com/free-photo/mechanic-getting-rid-hvac-system-dirt_482257-91994.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80',
       alt: 'Ilustração vetorial moderna de técnico africano instalando ar-condicionado em casa ou escritório em Angola'
     },
     automovel: {
