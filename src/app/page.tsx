@@ -867,7 +867,6 @@ export default function EConexGroupApp() {
       Soluções Profissionais em Limpeza e Manutenção em Angola
     </p>
   </div>
-</div>
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <div className="flex items-center space-x-2 text-gray-600">
