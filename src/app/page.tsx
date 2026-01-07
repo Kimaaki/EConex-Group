@@ -1205,7 +1205,7 @@ Peça agora o seu orçamento personalizado e descubra o plano ideal para o seu e
               O que os nossos clientes dizem
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Mais de 500 clientes satisfeitos confiam na EConex Group em toda Angola. Veja o que alguns dizem sobre nós:
+              Mais de 350 clientes satisfeitos confiam na EConex Group em toda Angola. Veja o que alguns dizem sobre nós:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
