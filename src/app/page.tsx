@@ -851,7 +851,7 @@ export default function EConexGroupApp() {
       )}
 
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+      <header className="absolute top-0 left-0 w-full z-50 bg-transparent">
         <div className="container mx-auto px-4 py-4 bg-white/70 backdrop-blur-md rounded-b-2xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -929,7 +929,7 @@ export default function EConexGroupApp() {
       </header>
 
       {/* Banner Carousel */}
-      <section className="relative h-96 md:h-[500px] overflow-hidden">
+      <section className="relative h-screen overflow-hidden">
         {banners.map((banner, index) => (
           <div
             key={index}
