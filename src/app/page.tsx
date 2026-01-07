@@ -1075,15 +1075,15 @@ export default function EConexGroupApp() {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                     <Button 
                       onClick={() => scrollToCalculator()}
-                      className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                      className="bg-[#111111] hover:bg-black text-white transition-colors"
                     >
                       <Calculator className="h-4 w-4 mr-2" />
                       Ver Orçamento
                     </Button>
                     <Button 
                       onClick={() => openCategoryForm(category.id)}
-                      variant="outline"
-                      className="border-blue-600 text-blue-600 hover:bg-blue-50"
+                      
+                      className="bg-sky-400 hover:bg-sky-500 text-white transition-colors"
                     >
                       <MessageCircle className="h-4 w-4 mr-2" />
                       Solicitar Serviço
