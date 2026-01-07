@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   title: "EConex Group - Serviços Completos Angola",
   description:
     "Serviços de limpeza, manutenção, climatização, automóvel e piscinas em Angola. Soluções profissionais com atendimento 24/7.",
+  // ✅ Usa o favicon gerido pelo Next em src/app/icon.svg
+  // (Evita conflito com PNG e elimina o erro do loader)
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -33,11 +38,11 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <Script src="/lasy-bridge.js" strategy="beforeInteractive" />
-        {/* Novo favicon atualizado */}
-        <link rel="icon" href="/icon-v2.png" type="image/png" />
-        <link rel="shortcut icon" href="/icon-v2.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/icon-v2.png" />
+
+        {/* ✅ Favicon correto (SVG) */}
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
       </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
