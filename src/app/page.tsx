@@ -268,8 +268,8 @@ export default function EConexGroupApp() {
 
   const banners = [
     {
-      title: 'EConex Group - Serviços Completos',
-      subtitle: 'Design de Interiores, Manutenção, Climatização, Higienização profissional de Espaços, Automóvel e Piscinas',
+      title: 'EConex Group - Serviços Profissionais',
+      subtitle: 'Design de Interiores, Manutenção, Climatização, Higienização profissional de Espaços, Automóveis e Piscinas',
       image: 'https://img.freepik.com/premium-photo/african-american-engineer-assisting-customer-with-car-maintenance-repair-shop-trained-professional-garage-looking-car-components-with-woman-servicing-her-vehicle-annual-checkup_482257-74127.jpg',
       cta: 'Solicitar Orçamento'
     },
