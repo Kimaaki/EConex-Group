@@ -992,7 +992,7 @@ export default function EConexGroupApp() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">350+</div>
               <div className="text-gray-600">Clientes Satisfeitos</div>
             </div>
             <div>
@@ -1000,7 +1000,7 @@ export default function EConexGroupApp() {
               <div className="text-gray-600">Anos de Experiência</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">24/7</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">9/17</div>
               <div className="text-gray-600">Atendimento</div>
             </div>
             <div>
