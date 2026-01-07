@@ -864,7 +864,7 @@ export default function EConexGroupApp() {
   <div>
     <h1 className="text-2xl font-bold text-gray-800">EConex Group</h1>
     <p className="text-sm text-gray-600">
-      Soluções Profissionais em Limpeza e Manutenção em Angola
+      Excelência em Manutenção e Estética de Ambientes
     </p>
   </div>
             </div>
