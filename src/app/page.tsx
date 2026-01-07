@@ -852,7 +852,7 @@ export default function EConexGroupApp() {
 
       {/* Header */}
       <header className="absolute top-0 left-0 w-full z-50 bg-transparent">
-        <div className="container mx-auto px-4 py-4 bg-white/70 backdrop-blur-md rounded-b-2xl">
+        <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
   <img
