@@ -855,18 +855,19 @@ export default function EConexGroupApp() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="bg-gradient-to-r from-blue-600 to-green-600 p-2 rounded-lg">
-               <img 
-  src="/logo-novo.png" 
-  alt="EConex Group" 
-  className="h-10 w-auto" 
-/>
+  <img
+    src="/icon-v2.png"
+    alt="EConex Group"
+    className="h-14 md:h-16 w-auto"
+  />
 
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-gray-800">EConex Group</h1>
-                <p className="text-sm text-gray-600">Soluções Profissionais em Limpeza e Manutenção em Angola</p>
-              </div>
+  <div>
+    <h1 className="text-2xl font-bold text-gray-800">EConex Group</h1>
+    <p className="text-sm text-gray-600">
+      Soluções Profissionais em Limpeza e Manutenção em Angola
+    </p>
+  </div>
+</div>
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <div className="flex items-center space-x-2 text-gray-600">
