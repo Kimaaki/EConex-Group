@@ -276,13 +276,13 @@ export default function EConexGroupApp() {
     {
       title: 'Soluções Integradas',
       subtitle: 'Equipamentos modernos e profissionais certificados para Angola',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop',
+      image: 'https://img.freepik.com/free-photo/top-view-steel-hammer-with-other-construction-elements-tools_23-2150576400.jpg?t=st=1767800337~exp=1767803937~hmac=12b3a5c25d0c512cfd77f7937dc87da3d33fa775bc6ab28ee431403603bfe45b',
       cta: 'Ver Serviços'
     },
     {
-      title: 'Atendimento 24/7',
+      title: 'Atendimento rápido e profissional. Simule o seu orçamento online e nós cuidamos do resto',
       subtitle: 'Estamos sempre prontos para o atender em toda Angola',
-      image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=1200&h=600&fit=crop',
+      image: 'https://img.freepik.com/free-photo/helpdesk-secretary-listening-client-helpline-call-using-customer-service-network-headset-male-receptionist-working-call-center-telemarketing-assistance-close-up_482257-44022.jpg?ga=GA1.1.616307467.1766244108&semt=ais_hybrid&w=740&q=80',
       cta: 'Falar no WhatsApp'
     }
   ]
