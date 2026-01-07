@@ -955,7 +955,7 @@ export default function EConexGroupApp() {
                   ) : (
                     <Button 
                       size="lg" 
-                      className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-lg px-8 py-3"
+                      className={`text-lg px-8 py-3 text-white transition-colors ${banner.cta === 'Ver Orçamento' ? 'bg-black hover:bg-neutral-900' : 'bg-sky-400 hover:bg-sky-500'}`}
                       onClick={() => {
                         if (banner.cta === 'Solicitar Orçamento') {
                           document.getElementById('orcamento')?.scrollIntoView({ behavior: 'smooth' })
