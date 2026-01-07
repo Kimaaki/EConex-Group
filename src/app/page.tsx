@@ -270,7 +270,7 @@ export default function EConexGroupApp() {
     {
       title: 'EConex Group - Serviços Completos',
       subtitle: 'Limpeza, Manutenção, Climatização, Automóvel e Piscinas em Angola',
-      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&h=600&fit=crop',
+      image: 'https://img.freepik.com/premium-photo/african-american-engineer-assisting-customer-with-car-maintenance-repair-shop-trained-professional-garage-looking-car-components-with-woman-servicing-her-vehicle-annual-checkup_482257-74127.jpg',
       cta: 'Solicitar Orçamento'
     },
     {
