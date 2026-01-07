@@ -1455,23 +1455,22 @@ Peça agora o seu orçamento personalizado e descubra o plano ideal para o seu e
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">EConex Group</h3>
-                  <p className="text-sm text-gray-400">Serviços Completos Angola</p>
+                  <p className="text-sm text-gray-400">Serviços Profissionais</p>
                 </div>
               </div>
               <p className="text-gray-400">
-                A EConex Group é uma empresa angolana especializada em limpeza, manutenção e climatização. 
-                Combinamos tecnologia, rapidez e qualidade para oferecer um serviço de excelência.
+                Na EConex Group, unimos a sofisticação do Design de Interiores à precisão da Manutenção e Higienização Profissional. 
+                Somos uma empresa angolana focada na excelência, utilizando tecnologia de ponta para elevar a estética e o funcionamento de cada detalhe do seu ambiente.
               </p>
             </div>
 
             <div>
               <h4 className="text-lg font-semibold mb-4">Serviços</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Limpeza Completa</li>
+                <li>Design de Interiores</li>
                 <li>Manutenção & Reparação</li>
+                <li>Higienização Profissional</li>
                 <li>Climatização (AC)</li>
-                <li>Serviços Automóvel</li>
-                <li>Manutenção de Piscinas</li>
                 <li>Soluções Integradas</li>
               </ul>
             </div>
@@ -1481,11 +1480,11 @@ Peça agora o seu orçamento personalizado e descubra o plano ideal para o seu e
               <div className="space-y-3 text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
-                  <a href="tel:+244920000000" className="hover:text-white">+244 920 000 000</a>
+                  <a href="tel:+244938855529" className="hover:text-white">+244 920 000 000</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MessageCircle className="h-4 w-4" />
-                  <a href="https://wa.me/244920000000" className="hover:text-white">WhatsApp</a>
+                  <a href="https://wa.me/244938855529" className="hover:text-white">WhatsApp</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4" />
