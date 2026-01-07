@@ -8,7 +8,7 @@ import { UiProvider } from "@/contexts/UiContext";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-inter",
   display: "swap",
 });
 
