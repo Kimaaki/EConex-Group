@@ -171,8 +171,8 @@ export default function EConexGroupApp() {
   // Serviços organizados por categoria com preços ajustados para Angola
   const serviceCategories = [
     {
-      id: 'higienização',
-      title: 'higienização',
+      id: 'higienizacao',
+      title: 'Higienização',
       description: 'Serviços completos de higienização para todos os ambientes',
       subtitle: 'Soluções de higienização adaptadas à realidade das cidades angolanas — rapidez, confiança e preço justo.',
       icon: () => null,
