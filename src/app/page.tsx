@@ -109,7 +109,7 @@ export default function EConexGroupApp() {
 
   // Definição dos serviços por categoria com preços em Kwanzas - ATUALIZADA CONFORME SOLICITAÇÃO
   const categoryServices = {
-    Higienização profissional: [
+    Higienização: [
       { name: 'Limpeza Doméstica', price: 23750 },
       { name: 'Escritórios e Lojas', price: 28500 },
       { name: 'Limpeza Pós-Obra', price: 118750 },
