@@ -1448,18 +1448,6 @@ Peça agora o seu orçamento personalizado e descubra o plano ideal para o seu e
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-3 mb-4">
-                
-                <div>
-                  <h3 className="text-xl font-bold">EConex Group</h3>
-                  <p className="text-sm text-gray-400">Serviços Profissionais</p>
-                </div>
-              </div>
-              <p className="text-gray-400">
-                Na EConex Group, unimos a sofisticação do Design de Interiores à precisão da Manutenção e Higienização Profissional. 
-                Somos uma empresa angolana focada na excelência, utilizando tecnologia de ponta para elevar a estética e o funcionamento de cada detalhe do seu ambiente.
-              </p>
-            </div>
 
             <div>
               <h4 className="text-lg font-semibold mb-4">Serviços</h4>
