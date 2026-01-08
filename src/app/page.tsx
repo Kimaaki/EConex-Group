@@ -1446,10 +1446,8 @@ Peça agora o seu orçamento personalizado e descubra o plano ideal para o seu e
       {/* Footer */}
       <footer className="bg-neutral-900 text-white py-8">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
               <h4 className="text-lg font-semibold mb-4">Serviços</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>Design de Interiores</li>
