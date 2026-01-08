@@ -171,11 +171,11 @@ export default function EConexGroupApp() {
   // Serviços organizados por categoria com preços ajustados para Angola
   const serviceCategories = [
     {
-      id: 'limpeza',
-      title: 'limpeza',
+      id: 'higienização',
+      title: 'higienização',
       description: 'Serviços completos de higienização para todos os ambientes',
       subtitle: 'Soluções de higienização adaptadas à realidade das cidades angolanas — rapidez, confiança e preço justo.',
-      icon: null,
+      icon: () => null,
       image: 'https://img.freepik.com/premium-photo/young-black-man-uniform-yellow-gloves-using-vacuum-cleaner_274679-35137.jpg'
     },
     {
@@ -183,7 +183,7 @@ export default function EConexGroupApp() {
       title: 'Manutenção & Reparação',
       description: 'Serviços técnicos de manutenção e reparação',
       subtitle: 'Técnicos especializados para resolver problemas elétricos, hidráulicos e de equipamentos.',
-      icon: null,
+      icon: () => null,
       image: 'https://img.freepik.com/free-photo/licensed-serviceman-starting-routine-condenser-maintenance-using-manifold-meters-read-pressure-external-air-conditioner-while-seasoned-wireman-writes-hvac-system-checkup-report-clipboard_482257-68066.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80'
     },
     {
@@ -191,7 +191,7 @@ export default function EConexGroupApp() {
       title: 'Climatização',
       description: 'Instalação e manutenção de sistemas de ar-condicionado',
       subtitle: 'Especialistas em climatização para o clima tropical angolano.',
-      icon: null,
+      icon: () => null,
       image: 'https://img.freepik.com/free-photo/expert-repairman-doing-condenser-investigations-filter-replacements-necessary-fixes-prevent-major-breakdowns-proficient-worker-checking-up-hvac-system-writing-findings-clipboard_482257-65742.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80'
     },
     {
@@ -199,7 +199,7 @@ export default function EConexGroupApp() {
       title: 'Automovel',
       description: 'Serviços especializados para veículos',
       subtitle: 'Cuidamos do seu veículo com produtos de qualidade e técnicas profissionais.',
-      icon: null,
+      icon: () => null,
       image: 'https://img.freepik.com/free-photo/expert-repairs-car-helped-by-lamp-light_482257-102860.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80'
     },
     {
@@ -207,7 +207,7 @@ export default function EConexGroupApp() {
       title: 'Piscinas',
       description: 'Manutenção e tratamento de piscinas',
       subtitle: 'Mantenha sua piscina sempre limpa e segura para toda a família.',
-      icon: null,
+      icon: () => null,
       image: 'https://img.freepik.com/free-photo/sky-travel-resort-leisure-swimming_1203-4672.jpg?ga=GA1.1.1755074997.1757074077&semt=ais_hybrid&w=740&q=80'
     }
   ]
