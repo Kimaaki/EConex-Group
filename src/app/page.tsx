@@ -147,7 +147,7 @@ export default function EConexGroupApp() {
   // Imagens únicas para categorias - CLIMATIZAÇÃO CORRIGIDA CONFORME SOLICITAÇÃO
   const categoryImages = {
     higienizacao: {
-      url: 'https://img.freepik.com/free-photo/full-shot-man-cleaning-doorknob_23-2149345532.jpg?t=st=1767894152~exp=1767897752~hmac=bf708843622fbccb825376ccb12fd820f9884da9d31c8deabbee918ea9c6501e&w=1480',
+      url: 'https://img.freepik.com/premium-photo/young-black-man-uniform-yellow-gloves-using-vacuum-cleaner_274679-35137.jpg',
       alt: 'Profissional africana limpando sofá em casa moderna'
     },
     manutencao: {
