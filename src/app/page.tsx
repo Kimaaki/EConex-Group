@@ -147,7 +147,7 @@ export default function EConexGroupApp() {
   // Imagens únicas para categorias - CLIMATIZAÇÃO CORRIGIDA CONFORME SOLICITAÇÃO
   const categoryImages = {
     Higienização: {
-      url: 'https://img.freepik.com/free-photo/full-shot-men-cleaning-office_23-2149345551.jpg?t=st=1761237662~exp=1761241262~hmac=6eb99e5d17a93048a559463c298bf45e9e8025b1591c3f4022051e988a3dc1b2',
+      url: 'https://img.freepik.com/free-photo/full-shot-man-cleaning-doorknob_23-2149345532.jpg?t=st=1767894152~exp=1767897752~hmac=bf708843622fbccb825376ccb12fd820f9884da9d31c8deabbee918ea9c6501e&w=1480',
       alt: 'Profissional africana limpando sofá em casa moderna'
     },
     manutencao: {
@@ -171,12 +171,12 @@ export default function EConexGroupApp() {
   // Serviços organizados por categoria com preços ajustados para Angola
   const serviceCategories = [
     {
-      id: 'limpeza',
-      title: 'Limpeza',
+      id: 'higienização',
+      title: 'Higienização',
       description: 'Serviços completos de higienização para todos os ambientes',
       subtitle: 'Soluções de higienização adaptadas à realidade das cidades angolanas — rapidez, confiança e preço justo.',
       icon: () => null,
-      image: 'https://img.freepik.com/premium-photo/young-black-man-uniform-yellow-gloves-using-vacuum-cleaner_274679-35137.jpg'
+      image: 'https://img.freepik.com/free-photo/full-shot-man-cleaning-doorknob_23-2149345532.jpg?t=st=1767894152~exp=1767897752~hmac=bf708843622fbccb825376ccb12fd820f9884da9d31c8deabbee918ea9c6501e&w=1480'
     },
     {
       id: 'manutencao',
