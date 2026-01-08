@@ -1016,12 +1016,11 @@ export default function EConexGroupApp() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Sobre Nós
+              Quem somos
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              A EConex Group é uma empresa angolana especializada em limpeza, manutenção e climatização. 
-              Combinamos tecnologia, rapidez e qualidade para oferecer um serviço de excelência. 
-              Nosso sistema de orçamentos em tempo real e atendimento via WhatsApp garantem transparência e comodidade.
+              Somos referência angolana em Design de Interiores, Manutenção e Higienização Profissional. Unimos sofisticação técnica e tecnologia de ponta para elevar o padrão dos ambientes onde atuamos. 
+              Com um sistema inovador automatizado de solicitação de orçamentos em tempo real via site e atendimento ágil via WhatsApp, garantimos transparência total e a máxima comodidade para os nossos clientes.
             </p>
           </div>
         </div>
@@ -1035,7 +1034,7 @@ export default function EConexGroupApp() {
               Tipos de Serviço
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Soluções de limpeza e manutenção adaptadas à realidade das cidades angolanas — rapidez, confiança e preço justo.
+              Soluções de design, higienização profissional, e manutenção adaptadas à realidade das cidades angolanas. Com rapidez, confiança e preço justo.
             </p>
           </div>
 
