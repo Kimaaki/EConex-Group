@@ -146,7 +146,7 @@ export default function EConexGroupApp() {
 
   // Imagens únicas para categorias - CLIMATIZAÇÃO CORRIGIDA CONFORME SOLICITAÇÃO
   const categoryImages = {
-    Higienização profissional: {
+    Higienização: {
       url: 'https://img.freepik.com/free-photo/full-shot-men-cleaning-office_23-2149345551.jpg?t=st=1761237662~exp=1761241262~hmac=6eb99e5d17a93048a559463c298bf45e9e8025b1591c3f4022051e988a3dc1b2',
       alt: 'Profissional africana limpando sofá em casa moderna'
     },
