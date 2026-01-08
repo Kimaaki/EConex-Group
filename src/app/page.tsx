@@ -1449,9 +1449,7 @@ Peça agora o seu orçamento personalizado e descubra o plano ideal para o seu e
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="bg-gradient-to-r from-blue-600 to-green-600 p-2 rounded-lg">
-                  <Sparkles className="h-6 w-6 text-white" />
-                </div>
+                
                 <div>
                   <h3 className="text-xl font-bold">EConex Group</h3>
                   <p className="text-sm text-gray-400">Serviços Profissionais</p>
