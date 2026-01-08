@@ -109,7 +109,7 @@ export default function EConexGroupApp() {
 
   // Definição dos serviços por categoria com preços em Kwanzas - ATUALIZADA CONFORME SOLICITAÇÃO
   const categoryServices = {
-    Higienização: [
+    higienizacao: [
       { name: 'Limpeza Doméstica', price: 23750 },
       { name: 'Escritórios e Lojas', price: 28500 },
       { name: 'Limpeza Pós-Obra', price: 118750 },
@@ -146,7 +146,7 @@ export default function EConexGroupApp() {
 
   // Imagens únicas para categorias - CLIMATIZAÇÃO CORRIGIDA CONFORME SOLICITAÇÃO
   const categoryImages = {
-    Higienização: {
+    higienizacao: {
       url: 'https://img.freepik.com/free-photo/full-shot-man-cleaning-doorknob_23-2149345532.jpg?t=st=1767894152~exp=1767897752~hmac=bf708843622fbccb825376ccb12fd820f9884da9d31c8deabbee918ea9c6501e&w=1480',
       alt: 'Profissional africana limpando sofá em casa moderna'
     },
@@ -171,7 +171,7 @@ export default function EConexGroupApp() {
   // Serviços organizados por categoria com preços ajustados para Angola
   const serviceCategories = [
     {
-      id: 'limpeza',
+      id: 'higienizacao',
       title: 'Higienização',
       description: 'Serviços completos de higienização para todos os ambientes',
       subtitle: 'Soluções de higienização adaptadas à realidade das cidades angolanas — rapidez, confiança e preço justo.',
